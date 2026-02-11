@@ -110,7 +110,7 @@ body {
 }
 .nav-menu a {
   text-decoration: none;
-  color: white;
+  color: #111;
   font-weight: 500;
 }
 .nav-menu a:hover{
