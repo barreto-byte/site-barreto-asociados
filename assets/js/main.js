@@ -5,10 +5,8 @@ function loadComponent(id, file) {
       document.getElementById(id).innerHTML = data;
     });
 }
-
-window.addEventListener("scroll", () => {
   const nav = document.querySelector(".nav");
-
+window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     nav.classList.add("scrolled");
   } else {
