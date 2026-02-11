@@ -84,7 +84,7 @@ body {
 }
 
 /* NAVBAR */
-.nav {
+.navbar {
   position: fixed;
   top: 0;
   background: transparent;
@@ -120,11 +120,11 @@ body {
 }
 
 /* estado scrolleado */
-.nav.scrolled {
+.navbar.scrolled {
   background: rgba(20,20,20,0.85);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-.nav.scrolled .nav-menu a {
+.navbar.scrolled .nav-menu a {
   color: white;
 }
