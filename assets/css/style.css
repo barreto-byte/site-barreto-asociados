@@ -156,6 +156,7 @@ body {
 .footer-contact h4{
   color: white;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-links ul {
   list-style: none;
