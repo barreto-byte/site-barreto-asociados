@@ -144,8 +144,9 @@ body {
   gap: 60px;
 }
 .footer-logo{
-  height: 50px;
+  height: 80px;
   margin-bottom: 12px;
+  text-align: center;
 }
 .footer-name{
   font-weight: 600;
