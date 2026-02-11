@@ -105,12 +105,12 @@ body {
 .nav-menu{
   display: flex;
   gap: 28px;
-  color: white;
+  color: #111;
   list-style: none;
 }
 .nav-menu a {
   text-decoration: none;
-  color: #111;
+  color: white;
   font-weight: 500;
 }
 .nav-menu a:hover{
