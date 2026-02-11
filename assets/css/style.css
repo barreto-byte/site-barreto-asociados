@@ -128,3 +128,6 @@ body {
 .navbar.scrolled .nav-menu a {
   color: white;
 }
+.navbar.scrolled .nav-menu a:hover {
+  color: #c9a14a;
+}
