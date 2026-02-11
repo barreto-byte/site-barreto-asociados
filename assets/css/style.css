@@ -94,7 +94,6 @@ body {
   z-index: 1000;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  color: white;
 }
 
 .nav-wrapper{
@@ -111,7 +110,7 @@ body {
 }
 .nav-menu a {
   text-decoration: none;
-  color: #111;
+  color: white;
   font-weight: 500;
 }
 .nav-menu a:hover{
