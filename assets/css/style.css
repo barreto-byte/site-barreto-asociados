@@ -112,9 +112,11 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 500;
+  transition: 0.3s;
 }
 .nav-menu a:hover{
   opacity: 0.7;
+  color: #c9a14a;
 }
 
 /* estado scrolleado */
