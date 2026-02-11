@@ -21,10 +21,49 @@ body {
 
 /* HERO */
 .hero {
-  height: 90vh;
+  position: relative;
+  height: 95vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Imagen fondo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/hero.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+
+/* Capa oscura elegante */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.7);
+  z-index: 2;
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
 .btn-primary {
@@ -35,4 +74,21 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 6px;
+}
+
+/* NAVBAR */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 0;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+/* estado scrolleado */
+.nav.scrolled {
+  background: rgba(10, 20, 40, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
