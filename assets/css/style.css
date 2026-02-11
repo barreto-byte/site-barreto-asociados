@@ -121,4 +121,5 @@ body {
   background: rgba(10, 20, 40, 0.95);
   backdrop-filter: blur(6px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  color: #fff;
 }
