@@ -273,6 +273,11 @@ body {
   opacity: 0.7;
   color: #c9a14a;
 }
+.menu-toggle {
+  display: none; /* Oculto en PC */
+  flex-direction: column;
+  cursor: pointer;
+}
 
 /* estado scrolleado */
 .navbar.scrolled {
@@ -351,6 +356,29 @@ body {
   text-align: center;
   font-size: 13px;
   color: #888;
+}
+/* Móvil: Menú Hamburguesa */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Aparece en móvil */
+  }
+
+  .nav-menu {
+    display: none; /* Se oculta por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según el alto de tu navbar */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Clase que activaremos con JavaScript */
+  .nav-menu.active {
+    display: flex;
+  }
 }
 @media (max-width:768px){
   .footer-grid{

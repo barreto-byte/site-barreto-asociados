@@ -8,7 +8,12 @@ function loadComponent(id, file, callback) {
 }
 loadComponent("navbar", "/partials/navbar.html", () => {
   const navbar = document.querySelector(".navbar");
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-menu');
 
+  menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
