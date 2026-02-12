@@ -264,6 +264,7 @@ body {
   gap: 28px;
   color: #111;
   list-style: none;
+  background: transparent;
 }
 .nav-menu a {
   text-decoration: none;
@@ -303,7 +304,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .navbar.scrolled .nav-menu a {
-  color: transparent;
+  color: white; /*Color de letra al momento de hacer scroll*/
 }
 .navbar.scrolled .nav-menu a:hover {
   color: #c9a14a;
