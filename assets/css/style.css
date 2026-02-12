@@ -303,7 +303,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .navbar.scrolled .nav-menu a {
-  color: white;
+  color: transparent;
 }
 .navbar.scrolled .nav-menu a:hover {
   color: #c9a14a;
