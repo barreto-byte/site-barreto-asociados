@@ -146,6 +146,11 @@ body {
   box-shadow: 0 8px 18px rgb(0,0,0,0.06);
   color:#c9a14a;
 }
+.sector-icon{
+  width: 42px;
+  margin-bottom: 18px;
+  text-align: center;
+}
 /* Capa oscura elegante */
 .hero-overlay {
   position: absolute;
