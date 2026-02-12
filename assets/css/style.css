@@ -124,6 +124,28 @@ body {
   color: #555;
   line-height: 1.6;
 }
+/*Sectores*/
+.sectors-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.sector-item{
+  background: white;
+  padding: 26px 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #222;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+.sector-item:hover{
+  transform: translateY(-4px);
+  border-color: #c9a14a;
+  box-shadow: 0 8px 18px rgb(0,0,0,0.06);
+  color:#c9a14a;
+}
 /* Capa oscura elegante */
 .hero-overlay {
   position: absolute;
