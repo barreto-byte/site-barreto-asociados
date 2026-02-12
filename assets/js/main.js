@@ -15,14 +15,14 @@ loadComponent("navbar", "/partials/navbar.html", () => {
   navLinks.classList.toggle('active');
 });
   window.addEventListener("scroll", () => {
+    if (navLinks.classList.contains('active') && window.scrollY > 10){
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+    }
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
-    }
-    if (navLinks.classList.contains('active')){
-      navLinks.classList.remove('active');
-      menuToggle.classList.remove('open');
     }
   });
 });
