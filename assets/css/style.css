@@ -86,7 +86,7 @@ body {
   color: #111;
 }
 /*Servicios*/
-.service-bg{
+.services-bg{
   background: #f7f7f7;
 }
 .center{
@@ -96,7 +96,7 @@ body {
   margin-bottom: 60px;
   color: #666;
 }
-.service-grid{
+.services-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
