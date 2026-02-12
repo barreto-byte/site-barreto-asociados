@@ -131,6 +131,7 @@ body {
   gap: 20px;
 }
 .sector-item{
+  display: flex;
   background: white;
   padding: 26px 20px;
   text-align: center;
