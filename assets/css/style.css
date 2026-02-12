@@ -45,7 +45,46 @@ body {
   width: auto;
   display: block;
 }
-
+/*Nosotros*/
+.section{
+  padding: 100px;
+}
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.section-title{
+  font-size: 34px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #111;
+}
+.about-text{
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+.about-imagen img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.btn-primary{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-primary:hover{
+  background: #c9a14a;
+  color: #111;
+}
 /* Capa oscura elegante */
 .hero-overlay {
   position: absolute;
@@ -205,5 +244,14 @@ body {
   }
   .footer-socials{
     justify-content: center;
+  }
+}
+@media (max-width:900px){
+  .about-grid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-content{
+    text-align: center;
   }
 }
