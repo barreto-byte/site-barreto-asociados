@@ -149,7 +149,7 @@ body {
 .sector-icon{
   width: 42px;
   margin-bottom: 18px;
-  text-align: center;
+  align-items: center;
 }
 /* Capa oscura elegante */
 .hero-overlay {
