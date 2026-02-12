@@ -160,12 +160,13 @@ body {
 
 /* estado scrolleado */
 .navbar.scrolled {
-  background: transparent;
+  background: #0A1C44;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .navbar.scrolled .nav-menu a {
   color: white;
+  background: transparent;
 }
 .navbar.scrolled .nav-menu a:hover {
   color: #c9a14a;
