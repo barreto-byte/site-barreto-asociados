@@ -379,7 +379,11 @@ body {
     }
 
     .nav-menu {
-        display: none; /* Ocultar lista por defecto */
+        display: flex; /* Ocultar lista por defecto */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-10px);
         flex-direction: column;
         position: fixed;
         top: 100%; /* Justo debajo del navbar */
@@ -393,6 +397,9 @@ body {
     /* 3. LA CLAVE: Qué pasa cuando JS añade "active" */
     .nav-menu.active {
         display: flex; /* Se muestra al hacer clic */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-menu li {

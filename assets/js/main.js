@@ -20,6 +20,10 @@ loadComponent("navbar", "/partials/navbar.html", () => {
     } else {
       navbar.classList.remove("scrolled");
     }
+    if (navLinks.classList.contains('active')){
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+    }
   });
 });
 
