@@ -127,7 +127,7 @@ body {
 /*Sectores*/
 .sectors-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 .sector-item{
@@ -326,4 +326,14 @@ body {
 .service-grid{
   grid-template-columns: 1fr;
 }
+}
+@media(max-width:900px){
+  .sectors-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:900px){
+  .sectors-grid{
+    grid-template-columns: 1fr;
+  }
 }
