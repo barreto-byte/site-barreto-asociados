@@ -249,6 +249,8 @@ body {
   z-index: 1000;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  overflow: visible !important;
 }
 
 .nav-wrapper{
@@ -381,11 +383,13 @@ body {
     .nav-menu {
         /* Posicionamiento */
         position: fixed;
-        top: 70px; /* Ajusta según el alto de tu navbar */
+        top: 100%; /* Ajusta según el alto de tu navbar */
         left: 0;
         width: 100%;
-        background-color: #ffffff;
-        
+        height: auto;
+        min-height: 250px;
+        background-color: rgb(231, 231, 231);
+        z-index: 999;
         /* Estado inicial (Oculto) */
         display: flex; /* Siempre es flex para que la transición funcione */
         flex-direction: column;
