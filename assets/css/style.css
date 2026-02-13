@@ -49,7 +49,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/hero/hero.jpg") center/cover no-repeat;
+  background: url("../img/hero/hero.jpg") center/cover no-repeat;
   background-size: cover;
   background-position: center;
 }
