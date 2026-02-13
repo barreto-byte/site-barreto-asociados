@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a1428; /* EL TRUCO: Pon aquí el mismo color que tu .hero-overlay */
+}
 /* RESET */
 * {
   margin: 0;
@@ -9,7 +14,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #111;
-  background: #fff;
+  background-color: #0a1428;
   line-height: 1.6;
   padding-top: 0 !important;
 }
@@ -22,14 +27,17 @@ body {
 
 /* HERO */
 .hero {
-  position: relative;
-  height: 95vh;
+position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ocupa toda la pantalla */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
   color: white;
+  overflow: hidden;
+  /* AQUÍ pon la imagen de fondo */
+  background: url("../img/hero/hero.jpg") center/cover no-repeat;
 }
 .hero::before {
     content: "";
@@ -43,10 +51,10 @@ body {
 }
 
 /* Imagen fondo */
-.hero-bg {
+/*.hero-bg {
   display: flex;
   width: 100%;
-  min-height: 100vh; /* Asegura que cubra todo el alto */
+  min-height: 100vh; Asegura que cubra todo el alto
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -57,7 +65,7 @@ body {
   align-items: center;
   background-size: cover;
   background-position: center;
-}
+}*/
 /*Logo */
 .logo img{
   height: 50px;
@@ -221,19 +229,22 @@ body {
 }
 /* Capa oscura elegante */
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 20, 40, 0.7);
-  z-index: 2;
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 40, 0.7); /* El color oscuro que elegiste */
+  z-index: 1;
 }
 
 
 /* Contenido */
 .hero-content {
-  position: relative;
-  z-index: 3;
+position: relative;
+  z-index: 2; /* Siempre por encima del overlay */
   max-width: 850px;
-  padding-top: 100px;
+  padding: 0 20px;
 }
 
 .hero h1 {
@@ -503,4 +514,9 @@ body {
   .posts-grid{
     grid-template-columns: 1fr;
   }
+}
+@supports (padding: env(safe-area-inset-top)) {
+    .navbar {
+        padding-top: env(safe-area-inset-top);
+    }
 }
