@@ -113,6 +113,56 @@ position: relative;
   background: #c9a14a;
   color: #111;
 }
+/*Pagina Nosotros*/
+.page-hero{
+  padding: 120px 0 80px;
+  background: #0f1b2b;
+  color: white;
+  text-align: center;
+}
+/* ABOUT GRID */
+.about-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* TEAM */
+.team-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:40px;
+  margin-top:40px;
+}
+.team-card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.team-card:hover{
+  transform:translateY(-6px);
+}
+
+.team-card img{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+
+.role{
+  display:block;
+  font-size:14px;
+  color:#c9a14a;
+  margin-bottom:12px;
+  font-weight:600;
+}
 /*Servicios*/
 .services-bg{
   background: rgb(231, 231, 231);
@@ -500,6 +550,7 @@ position: relative;
     justify-content: center;
   }
 }
+/*Responsive nosotros*/
 @media (max-width:900px){
   .about-grid{
     grid-template-columns: 1fr;
@@ -508,7 +559,11 @@ position: relative;
   .about-content{
     text-align: center;
   }
+  .team-grid{
+    grid-template-columns: 1fr;
+  }
 }
+
 @media(max-width:900px){
 .services-grid{
   grid-template-columns: repeat(2,1fr);
