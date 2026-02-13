@@ -14,7 +14,7 @@ html, body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #111;
-  background-color: #0a1428;
+  background-color:rgba(10, 20, 40, 0.7);
   line-height: 1.6;
   padding-top: 0 !important;
 }
@@ -250,6 +250,7 @@ position: relative;
   z-index: 2; /* Siempre por encima del overlay */
   max-width: 850px;
   padding: 0 20px;
+  margin-top: calc(env(safe-area-inset-top) + 80px);
 }
 
 .hero h1 {
