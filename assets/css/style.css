@@ -44,12 +44,17 @@ body {
 
 /* Imagen fondo */
 .hero-bg {
-  height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 100vh; /* Asegura que cubra todo el alto */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
   background: url("../img/hero/hero.jpg") center/cover no-repeat;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
 }
@@ -228,6 +233,7 @@ body {
   position: relative;
   z-index: 3;
   max-width: 850px;
+  padding-top: 100px;
 }
 
 .hero h1 {
@@ -272,6 +278,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: env(safe-area-inset-top);
 }
 
 .nav-menu{
