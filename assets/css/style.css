@@ -186,6 +186,7 @@ position: relative;
 /*===Publicaciones === */
 .section-post{
   background: rgb(231, 231, 231);
+  padding: 26px 20px;
 }
 .posts-grid{
   display: grid;
