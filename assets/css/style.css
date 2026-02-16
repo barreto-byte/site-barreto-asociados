@@ -210,6 +210,49 @@ position: relative;
   color: #555;
   line-height: 1.6;
 }
+/*Página de servicios*/
+.services-intro{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+}
+
+.service-block{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-bottom:80px;
+}
+
+.service-block img{
+  width:100%;
+  max-width:500px;
+  border-radius:12px;
+  justify-self:center;
+}
+
+.service-text h2{
+  margin-bottom:15px;
+}
+
+.reverse{
+  direction:rtl;
+}
+
+.reverse .service-text{
+  direction:ltr;
+}
+
+@media(max-width:900px){
+  .service-block{
+    grid-template-columns:1fr;
+  }
+  .reverse{
+    direction:ltr;
+  }
+}
+
 /*Sectores*/
 .sectors-grid{
   display: grid;
@@ -465,7 +508,6 @@ position: relative;
 .footer-socials img:hover{
   transform: translateY(-2px);
   opacity: 0.7;
-  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg); /* Opcional: un toque dorado al pasar el mouse */
 }
 .footer-bottom{
   border-top: 1px solid #222;
