@@ -459,10 +459,13 @@ position: relative;
   width: 22px;
   filter: brightness(0) invert(1);
   transition: 0.3s;
+  width: 30px; /* Ajusta según necesites */
+  transition: transform 0.3s ease;
 }
 .footer-socials img:hover{
   transform: translateY(-2px);
   opacity: 0.7;
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg); /* Opcional: un toque dorado al pasar el mouse */
 }
 .footer-bottom{
   border-top: 1px solid #222;
