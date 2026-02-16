@@ -457,7 +457,7 @@ position: relative;
 }
 .footer-socials img{
   width: 22px;
-  filter: brightness(0) invert(1);
+  /*filter: brightness(0) invert(1);*/
   transition: 0.3s;
   width: 30px; /* Ajusta según necesites */
   transition: transform 0.3s ease;
