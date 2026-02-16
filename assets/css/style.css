@@ -24,6 +24,9 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+section.bg-light{
+  background-color: rgb(231, 231, 231);
+}
 
 /* HERO */
 .hero {
@@ -284,6 +287,136 @@ position: relative;
   width: 40px;
   margin-bottom: 10px;
 }
+/*Página sectores*/
+.sectors-intro{
+  max-width:750px;
+  margin:auto;
+  font-size:18px;
+}
+.section-title{
+  position:relative;
+  padding-left:20px;
+  margin-bottom:30px;
+}
+
+.section-title::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:5px;
+  width:4px;
+  height:80%;
+  background-color:#b89b5e; /* dorado */
+  border-radius:2px;
+}
+
+.sectors-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  margin-top:20px;
+}
+
+.sector-card{
+  background:white;
+  padding:40px 30px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+  text-align:left;
+}
+
+.sector-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.08);
+}
+
+.sector-icon{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#b89b5e; /* dorado elegante */
+}
+
+.sector-card h3{
+  position:relative;
+  padding-left:13px;
+}
+
+.sector-card h3::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:6px;
+  width:3px;
+  height:70%;
+  background-color:#b89b5e;
+}
+.dark-section{
+  background-color:#1a1a1a;
+  color:white;
+  padding:120px 0 140px 0;
+}
+.dark-title {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+  display: block; 
+  width: 100%;
+}
+
+.dark-title::after {
+  content: "";
+  display: block;
+  width: 40%; 
+  max-width: 390px;
+  min-width: 100px;
+  height: 3px;
+  background-color: #b89b5e;
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+/* Estado inicial para la animación */
+  transform: scaleX(0);
+  transform-origin: center;
+  /* Llamada a la animación */
+  animation: lineGrow 0.8s ease-out forwards;
+}
+@media (max-width: 480px) {
+  .dark-title::after {
+    width: 60%; /* En móviles se ve mejor un poco más larga respecto al texto */
+    max-width: 250px; /* Pero evitamos que se salga de la pantalla */
+  }
+}
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.dark-section h2{
+  margin-bottom:20px;
+}
+
+.dark-section p{
+  max-width:700px;
+  margin:auto;
+  opacity:0.9;
+}
+
+@media(max-width:1000px){
+  .sectors-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px){
+  .sectors-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 /*===Publicaciones === */
 .section-post{
   background: rgb(231, 231, 231);
