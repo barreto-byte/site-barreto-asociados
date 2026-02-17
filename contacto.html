@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Barreto & Asociados">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Barreto & Asociados | Firma Legal</title>
     <meta name="description" content="Firma legal especializada en defensa penal y asesoría jurídica en Perú.">
+    <link rel="icon" type="apple-touch-icon" href="assets/img/logo/logo1.png">
+    <link rel="apple-touch-icon" href="assets/img/logo/logo2.jpeg">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -13,11 +19,85 @@
 <body>
     <!-- NAVBAR -->
   <header id="navbar"></header>
-<div>
-    <h1>
-      CONTACTO
-    </h1>
+<main>
+  <section class="page-hero">
+  <div class="container center">
+    <h1>Contacto</h1>
+    <p>Confidencialidad, compromiso y atención personalizada.</p>
   </div>
+</section>
+<section class="section">
+  <div class="container contact-grid">
+
+    <!-- Formulario -->
+    <div class="contact-form">
+      <h2>Solicitar asesoría</h2>
+
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Nombre completo" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" placeholder="Teléfono">
+        </div>
+
+        <div class="form-group">
+          <textarea rows="5" placeholder="Detalle brevemente su consulta" required></textarea>
+        </div>
+        <p class="form-note">
+  La información enviada será tratada con estricta confidencialidad.
+        </p>
+        <button type="submit" class="btn-submit">
+          Enviar consulta
+        </button>
+        <p class="form-success" id="formSuccess">
+          Su consulta ha sido enviada correctamente. Nos pondremos en contacto a la brevedad.
+        </p>
+      </form>
+    </div>
+
+    <!-- Datos -->
+    <div class="contact-info">
+      <h2>Información de contacto</h2>
+
+      <p><strong>Dirección:</strong><br>
+      Jr. Pezet y Monel N° 2729-<br>
+      Lince- Lima- Perú</p>
+
+      <p><strong>Teléfono:</strong><br>
+      (01) 6846564</p>
+
+      <p><strong>Correo:</strong><br>
+      barreto@barretofirmalegal.com</p>
+
+      <p><strong>Horario de atención:</strong><br>
+      Lunes a Viernes<br>
+      9:00 am – 6:00 pm</p>
+    </div>
+
+  </div>
+</section>
+<section class="map-section">
+  <div class="container">
+  <div class="map-wrapper">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.30941156342!2d-77.04395912586274!3d-12.090957742723312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8597abbf45d%3A0xda987df48469911!2sJr.%20Jos%C3%A9%20Pezet%20y%20Monel%202729%2C%20Lima%2015073!5e0!3m2!1ses-419!2spe!4v1771339164109!5m2!1ses-419!2spe" 
+  width="400" 
+  height="350" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    </div>
+  </div>
+</section>
+
+</main>
 
 
   <!-- FOOTER -->
@@ -26,5 +106,17 @@
   <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+  const form = document.querySelector("form");
+  const successMessage = document.getElementById("formSuccess");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); // evita recargar página
+
+    successMessage.classList.add("show");
+
+    form.reset();
+  });
+</script>
 </body>
 </html>
