@@ -12,6 +12,7 @@
   <meta name="description" content="Firma legal especializada en defensa penal y asesoría jurídica en Perú.">
   <link rel="icon" type="apple-touch-icon" href="assets/img/logo/logo1.png">
   <link rel="apple-touch-icon" href="assets/img/logo/logo2.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -48,7 +49,7 @@
 <section class="services section services-bg">
   <div class="container">
 
-    <h2 class="section-title center">Nuestros servicios</h2>
+    <h2 class="section-title index-title">Nuestros servicios</h2>
     <p class="section-subtitle center">
       Soluciones legales estratégicas adaptadas a cada caso.
     </p>
@@ -57,35 +58,53 @@
 
       <!-- Card -->
       <div class="service-card">
-        <img src="assets/img/services/defensapenal.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <!--<img src="assets/img/services/defensapenal.png" class="service-icon" alt="">-->
         <h3>Defensa penal</h3>
         <p>Patrocinio y representación en procesos penales con enfoque estratégico y confidencial.</p>
       </div>
 
       <div class="service-card">
-        <img src="assets/img/services/asesorialegal.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <!--<img src="assets/img/services/asesorialegal.png" class="service-icon" alt="">-->
         <h3>Asesoría legal preventiva</h3>
         <p>Análisis jurídico para minimizar riesgos y proteger los intereses de nuestros clientes.</p>
       </div>
 
       <div class="service-card">
-        <img src="assets/img/services/delitos.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <!--<img src="assets/img/services/delitos.png" class="service-icon" alt="">-->
         <h3>Delitos económicos y financieros</h3>
         <p>Defensa integral ante entidades judiciales y administrativas.</p>
       </div>
 
       <div class="service-card">
-        <img src="assets/img/services/compliance.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+        <!--<img src="assets/img/services/compliance.png" class="service-icon" alt="">-->
         <h3>Compliance penal</h3>
         <p>Diseño e implementación de modelos de prevención penal para empresas.</p>
       </div>
       <div class="service-card">
-        <img src="assets/img/services/habeas.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+        <!--<img src="assets/img/services/habeas.png" class="service-icon" alt="">-->
         <h3>Habeas corpus y procesos constitucionales</h3>
         <p>Acciones de defensa de derechos fundamentales frente a detenciones arbitrarias.</p>
       </div>
       <div class="service-card">
-        <img src="assets/img/services/defensa.png" class="service-icon" alt="">
+        <div class="service-icon">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <!--<img src="assets/img/services/defensa.png" class="service-icon" alt="">-->
         <h3>Defensa de altos funcionarios</h3>
         <p>Intervención en procesos por responsabilidad penal de autoridades públicas y privadas.</p>
       </div>
@@ -95,7 +114,7 @@
 <section class="sectors section">
   <div class="container">
 
-    <h2 class="section-title center">Sectores que asesoramos</h2>
+    <h2 class="section-title index-title">Sectores que asesoramos</h2>
     <p class="section-subtitle center">
       Experiencia legal en distintos ámbitos empresariales e institucionales.
     </p>
@@ -130,7 +149,7 @@
 
     <!-- Texto -->
     <div class="about-content">
-      <h2 class="section-title">Nosotros</h2>
+      <h2 class="section-title index-title">Nosotros</h2>
 
       <p class="about-text">
         En <strong>Barreto & Asociados SCRL</strong> brindamos asesoría y defensa legal especializada en materia penal,
@@ -156,7 +175,10 @@
       <div class="container">
 
         <div class="post-card">
-
+            <h2 class="section-title index-title">Publicaciones</h2>
+              <p class="section-subtitle center">
+              Reflexiones y análisis sobre derecho penal y cumplimiento normativo.
+              </p>
           <div class="publication-image">
             <img src="assets/img/blog/responsabilidad.jpg" alt="">
           </div>
@@ -197,6 +219,16 @@
   <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+  const navbar = document.querySelector(".navbar");
 
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 80){
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
 </body>
 </html>
