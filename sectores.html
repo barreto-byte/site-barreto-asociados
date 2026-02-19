@@ -144,23 +144,17 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-  let currentPage = window.location.pathname.split("/").pop();
-
-  // Si estás en dominio.com/ sin index.html
-  if(currentPage === ""){
-    currentPage = "index.html";
-  }
-
   const navLinks = document.querySelectorAll(".nav-menu a");
+  const currentPath = window.location.pathname;
 
   navLinks.forEach(link => {
 
-    let linkPage = link.getAttribute("href");
+    const linkPath = new URL(link.href).pathname;
 
-    // Limpia posibles rutas tipo /index.html
-    linkPage = linkPage.replace("/", "");
-
-    if(linkPage === currentPage){
+    if (
+      currentPath === linkPath || 
+      (currentPath === "/" && linkPath.includes("index.html"))
+    ) {
       link.classList.add("active");
     }
 
@@ -168,5 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+
 </body>
 </html>
