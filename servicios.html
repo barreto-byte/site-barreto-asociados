@@ -123,15 +123,31 @@
   });
 </script>
 <script>
-  const currentPage = window.location.pathname.split("/").pop();
+document.addEventListener("DOMContentLoaded", function() {
+
+  let currentPage = window.location.pathname.split("/").pop();
+
+  // Si estás en dominio.com/ sin index.html
+  if(currentPage === ""){
+    currentPage = "index.html";
+  }
+
   const navLinks = document.querySelectorAll(".nav-menu a");
 
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute("href");
+
+    let linkPage = link.getAttribute("href");
+
+    // Limpia posibles rutas tipo /index.html
+    linkPage = linkPage.replace("/", "");
+
     if(linkPage === currentPage){
       link.classList.add("active");
     }
+
   });
+
+});
 </script>
 </body>
 </html>
