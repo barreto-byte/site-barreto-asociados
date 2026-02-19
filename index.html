@@ -231,25 +231,35 @@
   });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+fetch("partials/navbar.html")
+  .then(response => response.text())
+  .then(data => {
 
-  const navLinks = document.querySelectorAll(".nav-menu a");
-  const currentPath = window.location.pathname;
+    document.getElementById("navbar").innerHTML = data;
 
-  navLinks.forEach(link => {
+    // 🔹 ACTIVAR LINK ACTUAL
+    const currentUrl = window.location.href;
+    const links = document.querySelectorAll(".nav-menu a");
 
-    const linkPath = new URL(link.href).pathname;
+    links.forEach(link => {
+      if (currentUrl.includes(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
 
-    if (
-      currentPath === linkPath || 
-      (currentPath === "/" && linkPath.includes("index.html"))
-    ) {
-      link.classList.add("active");
-    }
+    // 🔹 EFECTO SCROLL
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 80){
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
 
   });
-
-});
 </script>
+
 </body>
 </html>
