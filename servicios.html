@@ -7,10 +7,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Barreto & Asociados">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Barreto & Asociados | Firma Legal</title>
     <meta name="description" content="Firma legal especializada en defensa penal y asesoría jurídica en Perú.">
     <link rel="icon" type="apple-touch-icon" href="assets/img/logo/logo1.png">
     <link rel="apple-touch-icon" href="assets/img/logo/logo2.jpeg">
+    <title>Servicios | Barreto & Asociados</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -26,7 +26,7 @@
     <p>Defensa y asesoría penal estratégica en casos de alta complejidad.</p>
   </div>
 </section>
-<section class="section bg-light" class="section">
+<section  class="section">
   <div class="container center">
     <p class="services-intro">
       Nuestro equipo brinda representación jurídica especializada en derecho penal,
@@ -34,7 +34,7 @@
     </p>
   </div>
 </section>
-<section class="services-detail section" >
+<section  class="services-detail section" >
   <div class="container">
 
     <div class="service-block">
@@ -111,5 +111,27 @@
   <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 80){
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if(linkPage === currentPage){
+      link.classList.add("active");
+    }
+  });
+</script>
 </body>
 </html>

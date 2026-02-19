@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Barreto & Asociados">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Barreto & Asociados | Firma Legal</title>
+    <title>Sectores | Barreto & Asociados</title>
     <meta name="description" content="Firma legal especializada en defensa penal y asesoría jurídica en Perú.">
     <link rel="icon" type="apple-touch-icon" href="assets/img/logo/logo1.png">
     <link rel="apple-touch-icon" href="assets/img/logo/logo2.jpeg">
@@ -130,5 +130,27 @@
   <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 80){
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if(linkPage === currentPage){
+      link.classList.add("active");
+    }
+  });
+</script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-title" content="Barreto & Asociados">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <title>Barreto & Asociados | Firma Legal</title>
+  <title>Estudio | Barreto & Asociados</title>
   <meta name="description" content="Firma legal especializada en defensa penal y asesoría jurídica en Perú.">
   <link rel="icon" type="apple-touch-icon" href="assets/img/logo/logo1.png">
   <link rel="apple-touch-icon" href="assets/img/logo/logo2.jpeg">
@@ -227,6 +227,17 @@
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if(linkPage === currentPage){
+      link.classList.add("active");
     }
   });
 </script>
