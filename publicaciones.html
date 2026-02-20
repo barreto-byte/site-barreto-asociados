@@ -117,46 +117,5 @@
   <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
-  <script>
-  const navbar = document.querySelector(".navbar");
-
-  window.addEventListener("scroll", function(){
-    if(window.scrollY > 80){
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-</script>
-<script>
-fetch("partials/navbar.html")
-  .then(response => response.text())
-  .then(data => {
-
-    document.getElementById("navbar").innerHTML = data;
-
-    // 🔹 ACTIVAR LINK ACTUAL
-    const currentUrl = window.location.href;
-    const links = document.querySelectorAll(".nav-menu a");
-
-    links.forEach(link => {
-      if (currentUrl.includes(link.getAttribute("href"))) {
-        link.classList.add("active");
-      }
-    });
-
-    // 🔹 EFECTO SCROLL
-    const navbar = document.querySelector(".navbar");
-
-    window.addEventListener("scroll", function(){
-      if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-
-  });
-</script>
 </body>
 </html>
