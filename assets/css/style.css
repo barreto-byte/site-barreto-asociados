@@ -1022,7 +1022,7 @@ position: relative;
 
     .nav-menu {
         /* Posicionamiento */
-        position: fixed;
+        position: absolute;
         top: 100%; /* Ajusta según el alto de tu navbar */
         left: 0;
         width: 100%;
