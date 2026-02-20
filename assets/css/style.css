@@ -161,7 +161,7 @@ position: relative;
 .about-grid{
   display:grid;
   grid-template-columns: 1.2fr 0.8fr; /* texto más ancho, foto más contenida */
-  gap:60px;
+  gap:40px;
   align-items:center;
 }
 .about-grid img{
@@ -173,7 +173,7 @@ position: relative;
   justify-self:center;
 }
 /*Responsive nosotros*/
-@media (max-width:900px){
+@media (max-width:768px){
   .about-grid{
     grid-template-columns: 1fr;
     gap: 40px;
@@ -183,15 +183,38 @@ position: relative;
   }
   .team-grid{
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media (max-width: 768px){
+
+  .team-card h3{
+    font-size: 20px;
+  }
+
+  .team-card .role{
+    font-size: 14px;
+  }
+
+  .team-card p{
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+}
+@media (max-width: 768px){
+  .team-card{
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 /* TEAM */
 .team-grid{
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:120px;
-  margin-top:40px;
+  gap: 60px;
+  margin-top: 40px;
 }
 .team-card{
   background:white;
@@ -1012,7 +1035,7 @@ position: relative;
         display: flex; /* Mostrar solo en móvil */
     }
     .menu-toggle span {
-    background-color: #111; /* O el color claro que prefieras */
+    background-color: #c9a14a; /* O el color claro que prefieras */
     transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .navbar.scrolled .menu-toggle span {
