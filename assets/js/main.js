@@ -7,7 +7,7 @@ function loadComponent(id, file, callback) {
     });
 }
 
-loadComponent("navbar", "/partials/navbar.html", () => {
+loadComponent("navbar", "partials/navbar.html", () => {
 
   const navbar = document.querySelector(".navbar");
   const menuToggle = document.querySelector('.menu-toggle');
@@ -52,4 +52,4 @@ loadComponent("navbar", "/partials/navbar.html", () => {
 
 });
 
-loadComponent("footer", "/partials/footer.html");
+loadComponent("footer", "partials/footer.html");
