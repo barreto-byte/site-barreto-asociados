@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #0A1C44; /*mismo color que tu .hero-overlay */
+    background-color: #0a1428b3; /*mismo color que tu .hero-overlay */
 }
 
 /* RESET */
@@ -16,7 +16,6 @@ html, body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #111;
-  background-color: #0a1428;
   line-height: 1.6;
   padding-top: 0 !important;
 }
@@ -713,7 +712,7 @@ position: relative;
   max-width:500px;
   margin-bottom: 25px;
   padding-top:20px;
-  padding-left:20px;
+
 }
 .publication-image img{
   width:100%;
