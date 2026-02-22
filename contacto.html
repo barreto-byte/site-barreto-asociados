@@ -32,25 +32,34 @@
     <div class="contact-form">
       <h2>Solicitar asesoría</h2>
 
-      <form action="https://formspree.io/f/mojnkngl" method="post">
+      <form action="https://formspree.io/f/mojnkngl" method="POST">
+
         <div class="form-group">
-          <input type="text" placeholder="Nombre completo" required>
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
         </div>
 
         <div class="form-group">
-          <input type="email" placeholder="Correo electrónico" required>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
         </div>
 
         <div class="form-group">
-          <input type="tel" placeholder="Teléfono">
+          <input type="tel" name="telefono" placeholder="Teléfono">
         </div>
 
         <div class="form-group">
-          <textarea rows="5" placeholder="Detalle brevemente su consulta" required></textarea>
+          <textarea name="mensaje" rows="5" placeholder="Detalle brevemente su consulta" required></textarea>
         </div>
+
+        <!-- Asunto del correo -->
+        <input type="hidden" name="_subject" value="Nuevo contacto desde la web">
+
+        <!-- Anti spam simple -->
+        <input type="text" name="_gotcha" style="display:none">
+
         <p class="form-note">
   La información enviada será tratada con estricta confidencialidad.
         </p>
+
         <button type="submit" class="btn-submit">
           Enviar consulta
         </button>
